@@ -21,11 +21,11 @@ print(60 / 1.7 **2)
 # 190 80
 # 160 55 
 
-for i in range(4):
-    status = input("身長,体重:").split()
-    m = int(status[0]) / 100
-    kg = int(status[1])
-    print(kg / m **2)
+# for i in range(4):
+#     status = input("身長,体重:").split()
+#     m = int(status[0]) / 100
+#     kg = int(status[1])
+#     print(kg / m **2)
 # はろわ
 # 20.761245674740486
 # 身長,体重:170 60
@@ -36,3 +36,17 @@ for i in range(4):
 # 22.1606648199446
 # 身長,体重:160 55
 # 21.484374999999996
+
+# お題4: これまで作成したプログラムに足のサイズを追加して、それをBMIの次の行に出力してください
+# 入力は以下
+# 170 60 27
+# 180 70 29
+# 190 80 31
+# 160 55 40
+
+for i in range(4):
+    status = input("身長,体重,足:").split()
+    m = int(status[0]) / 100
+    kg = int(status[1])
+    print(kg / m **2)
+    print(status[2])
