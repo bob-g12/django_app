@@ -79,11 +79,18 @@ print(60 / 1.7 **2)
 # ○○さんの足のサイズはxx(kg)です。
 # という形で、単位を付与し出力する形に直してください
 
+# お題7
+# さん を くん に変更する際に、4箇所ではなく1箇所の変更で修正する形にするには、どうすればいいと思いますか？
+
+# お題8 これまで作成したプログラムで
+# です。 をなくすに変更する際に、4箇所ではなく1箇所の変更で修正する形にするには、どうすればいいと思いますか？
+san = "くん"
+gobi = "。"
 for i in range(4):
     status = input("名前,身長,体重,足:").split()
     m = int(status[1]) / 100
     kg = int(status[2])
-    print(status[0]+"さんの身長は"+str(status[1])+"(cm)です。")
-    print(status[0]+"さんの体重は"+str(kg)+"(kg)です。")
-    print(status[0]+"さんのBMIは"+str(kg / m **2)+"(kg/m2)です。")
-    print(status[0]+"さんの足のサイズは"+status[3]+"(kg)です。")
+    print(status[0]+san+"の身長は"+str(status[1])+"(cm)"+gobi)
+    print(status[0]+san+"の体重は"+str(kg)+"(kg)"+gobi)
+    print(status[0]+san+"のBMIは"+str(kg / m **2)+"(kg/m2)"+gobi)
+    print(status[0]+san+"の足のサイズは"+status[3]+"(kg)"+gobi)
