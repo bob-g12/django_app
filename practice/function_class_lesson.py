@@ -44,9 +44,30 @@ print(60 / 1.7 **2)
 # 190 80 31
 # 160 55 40
 
+# for i in range(4):
+#     status = input("身長,体重,足:").split()
+#     m = int(status[0]) / 100
+#     kg = int(status[1])
+#     print(kg / m **2)
+#     print(status[2])
+
+# お題5 これまで作成したプログラムに名前を追加して、
+# ○○さんの身長はxxです。
+# ○○さんの体重はxxです。
+# ○○さんのBMIはxxです。
+# ○○さんの足のサイズはxxです。
+# と出力する形に直してください
+# 入力は以下
+# いちお 170 60 27
+# としお 180 70 29
+# ともお 190 80 31
+# たましげ 160 55 40
+
 for i in range(4):
-    status = input("身長,体重,足:").split()
-    m = int(status[0]) / 100
-    kg = int(status[1])
-    print(kg / m **2)
-    print(status[2])
+    status = input("名前,身長,体重,足:").split()
+    m = int(status[1]) / 100
+    kg = int(status[2])
+    print(status[0]+"さんの身長は"+str(status[1])+"です。")
+    print(status[0]+"さんの体重は"+str(kg)+"です。")
+    print(status[0]+"さんのBMIは"+str(kg / m **2)+"です。")
+    print(status[0]+"さんの足のサイズは"+status[3]+"です。")
