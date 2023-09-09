@@ -63,11 +63,27 @@ print(60 / 1.7 **2)
 # ともお 190 80 31
 # たましげ 160 55 40
 
+# for i in range(4):
+#     status = input("名前,身長,体重,足:").split()
+#     m = int(status[1]) / 100
+#     kg = int(status[2])
+#     print(status[0]+"さんの身長は"+str(status[1])+"です。")
+#     print(status[0]+"さんの体重は"+str(kg)+"です。")
+#     print(status[0]+"さんのBMIは"+str(kg / m **2)+"です。")
+#     print(status[0]+"さんの足のサイズは"+status[3]+"です。")
+
+# お題6 これまで作成したプログラムに名前を追加して、
+# ○○さんの身長はxx(cm)です。
+# ○○さんの体重はxx(kg)です。
+# ○○さんのBMIはxx(kg/m2)です。
+# ○○さんの足のサイズはxx(kg)です。
+# という形で、単位を付与し出力する形に直してください
+
 for i in range(4):
     status = input("名前,身長,体重,足:").split()
     m = int(status[1]) / 100
     kg = int(status[2])
-    print(status[0]+"さんの身長は"+str(status[1])+"です。")
-    print(status[0]+"さんの体重は"+str(kg)+"です。")
-    print(status[0]+"さんのBMIは"+str(kg / m **2)+"です。")
-    print(status[0]+"さんの足のサイズは"+status[3]+"です。")
+    print(status[0]+"さんの身長は"+str(status[1])+"(cm)です。")
+    print(status[0]+"さんの体重は"+str(kg)+"(kg)です。")
+    print(status[0]+"さんのBMIは"+str(kg / m **2)+"(kg/m2)です。")
+    print(status[0]+"さんの足のサイズは"+status[3]+"(kg)です。")
