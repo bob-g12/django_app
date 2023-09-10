@@ -4,7 +4,6 @@ if  len(sys.argv) <= 1:
     print("")
 elif sys.argv[1] == "-h":
     print("Hello")
-
 elif  sys.argv[1] == "-m":
     
     san = "さん"
@@ -17,7 +16,9 @@ elif  sys.argv[1] == "-m":
     i = 0
     open_list = 0
     check_list =[]
-
+    # 目的: ファイル入力のリスト化、行数と公開設定のカウント
+    # 必要な入力: ststus, file, open_list, count,
+    # 用意したい出力: ststus, open_list, count,
     while True:
         status.append(file.readline().split())
 
@@ -26,10 +27,8 @@ elif  sys.argv[1] == "-m":
         if status[i][6] == "公開":
             open_list += 1
         status_len = len(status)
-        i += 1
-        
+        i += 1 
     count = i
-
 
     for i in range(len(status_name)):
         judge = "NO"
@@ -37,6 +36,7 @@ elif  sys.argv[1] == "-m":
             if status_name[i] == sys.argv[j]:
                 judge = "YES"
         check_list.append(judge)
+        
     if sys.argv[1] != "-m":
         print(str(open_list)+"人の名簿を受け取りました。")
 
