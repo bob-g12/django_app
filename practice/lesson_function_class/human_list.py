@@ -6,8 +6,16 @@ def ft_len(x):
         len_count += 1
     return len_count
 
-print(ft_len(sys.argv))
-print(len(sys.argv))
+# test1 = [['いちお', '170', '60', '27', 'エンジニア', '7', '非公開'], ['としお', '180', '70', '29', 'インラストレーター', '7', '公開'], ['ともお', '190', '80', '31', 'エンジニアの卵', '7', '公開'], ['たましげ', '160', '55', '40', '高校教師', '28', '非公開'], ['いたるっす', '170', '70', '29', 'プロデューサー', '7', '公開'], []]
+# test2 = ['BMI', '身長', '体重', '足のサイズ', '職業', '職歴', '公開',1]
+# print(ft_len(sys.argv),len(sys.argv),ft_len(sys.argv) == len(sys.argv))
+# print(ft_len(test1),len(test1),ft_len(test1) == len(test1))
+# print(ft_len(test2),len(test2),ft_len(test2) == len(test2))
+# print(ft_len([""]),len([""]),ft_len([""]) == len([""]))
+# print(ft_len([5]),len([5]),ft_len([5]) == len([5]))
+# print(ft_len("hoge"),len("hoge"),ft_len("hoge") == len("hoge"))
+# print(ft_len(""),len(""),ft_len("") == len(""))
+
 
 
 if  ft_len(sys.argv) <= 1:
@@ -41,8 +49,6 @@ elif  sys.argv[1] == "-m":
         status_len = ft_len(status)
         i += 1 
     count = i
-    print(ft_len(status))
-    print(len(status))
 
     for i in range(ft_len(status_name)):
         judge = "NO"
@@ -50,9 +56,7 @@ elif  sys.argv[1] == "-m":
             if status_name[i] == sys.argv[j]:
                 judge = "YES"
         check_list.append(judge)
-    
-    print(ft_len(sys.argv))
-    print(len(sys.argv))
+    print(status_name)
 
     if sys.argv[1] != "-m":
         print(str(open_list)+"人の名簿を受け取りました。")
