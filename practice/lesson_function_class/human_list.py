@@ -1,5 +1,17 @@
 import sys
+def ft_len(x):
+    len_count = 0
+    #print(x)
+    for i in x:
+        len_count += 1
+    return len_count
 
+print(ft_len(sys.argv))
+print(len(sys.argv))
+
+
+if  ft_len(sys.argv) <= 1:
+    print("")
 if  len(sys.argv) <= 1:
     print("")
 elif sys.argv[1] == "-h":
@@ -26,17 +38,22 @@ elif  sys.argv[1] == "-m":
             break
         if status[i][6] == "公開":
             open_list += 1
-        status_len = len(status)
+        status_len = ft_len(status)
         i += 1 
     count = i
+    print(ft_len(status))
+    print(len(status))
 
-    for i in range(len(status_name)):
+    for i in range(ft_len(status_name)):
         judge = "NO"
-        for j in range(len(sys.argv)):
+        for j in range(ft_len(sys.argv)):
             if status_name[i] == sys.argv[j]:
                 judge = "YES"
         check_list.append(judge)
-        
+    
+    print(ft_len(sys.argv))
+    print(len(sys.argv))
+
     if sys.argv[1] != "-m":
         print(str(open_list)+"人の名簿を受け取りました。")
 
