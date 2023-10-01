@@ -42,10 +42,13 @@ elif sys.argv[1] == "-h":
         if first == True:
             first = False
             continue
-
+        
+        sort_hobby_list = input_hobby_list[2].split("/")
+        sort_hobby_list.sort()
+        join_hobby_list = "、".join(sort_hobby_list)
         output_profile.append([input_profile[0],input_profile[-1],
                                input_hobby_list[1].replace(",",""),
-                               input_hobby_list[2].replace("/","、")])
+                               join_hobby_list])
         
     # 出力    
     for op in output_profile:
