@@ -43,12 +43,15 @@ elif  sys.argv[1] == "-m":
         status.append(file.readline().split())
 
         if status[i] == []:
+            del status[-1]
             break
         if status[i][6] == "公開":
             open_list += 1
         status_len = ft_len(status)
         i += 1 
     count = i
+    count -= 1
+    del status[0]
 
     for i in range(ft_len(status_name)):
         judge = "NO"
@@ -56,7 +59,6 @@ elif  sys.argv[1] == "-m":
             if status_name[i] == sys.argv[j]:
                 judge = "YES"
         check_list.append(judge)
-    print(status_name)
 
     if sys.argv[1] != "-m":
         print(str(open_list)+"人の名簿を受け取りました。")
