@@ -23,29 +23,42 @@ if  ft_len(sys.argv) <= 1:
 if  len(sys.argv) <= 1:
     print("")
 elif sys.argv[1] == "-h":
-    # 宣言: 必要な変数
-    # 
     # 入力
     # hobby_list.txtのファイル情報とinput.txtの公開情報を受け取りたい
     # input_hobby_list = hobby_list.txt: [[いち, 睡眠, アニメ/漫画/ゲーム/プログラミング/映画]...etc]
-    # input = input.txt: [[いちお 170 60 27 エンジニア 7 非公開]...etc]
-
+    # input_profile = profile.txt: [[いちお 170 60 27 エンジニア 7 非公開]...etc]
+    output_profile = []
+    first = True
+    fp_profile = open('profile.txt','r', encoding="utf-8")
+    fp_hobby_list = open('hobby_list.txt','r', encoding="utf-8")
 
     # データ加工
     # データのnameを一致させてhobby_list.txtの内容にも公開情報を適用させたい
-    # 1:output_hobby_list = []
-    # 2:output_hobby_list.extend(input[0][0],input[0][-1],input_hobby_list[0][1:-1])
-    # [["としお", "公開", "イラスト作成", "アニメ/漫画/ゲーム/ガンダム/激辛/一人ベイブレード"],
-    # ["ともお", "公開", "漫画 アニメ/漫画/ゲーム"], 
-    # ["いたるっす", "公開", "プロデュース/アニメ/漫画/ゲーム/映画"]]
-    # 出力
+    while True:
+        input_profile = fp_profile.readline().split()
+        input_hobby_list = fp_hobby_list.readline().split()
+        if input_profile == []:
+            break
+        if first == True:
+            first = False
+            continue
+
+        output_profile.append([input_profile[0],input_profile[-1],
+                               input_hobby_list[1].replace(",",""),
+                               input_hobby_list[2].replace("/","、")])
+        
+    # 出力    
+    for op in output_profile:
+        if op[1] == "公開":
+            print(op[0]+"さんのお気に入りの趣味は"+op[2]+"。"+"\n"+
+                  op[0]+"さんの他の趣味は、"+op[3]+"などです。")
     
 elif sys.argv[1] == "-m":
     
     san = "さん"
     gobi = ""
     status_name = ["BMI","身長","体重","足のサイズ","職業","職歴","公開"]
-    file = open('input.txt','r', encoding="utf-8")
+    file = open('profile.txt','r', encoding="utf-8")
     status = []
     status_len = 0
     counter = 0
