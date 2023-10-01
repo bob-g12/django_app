@@ -23,8 +23,24 @@ if  ft_len(sys.argv) <= 1:
 if  len(sys.argv) <= 1:
     print("")
 elif sys.argv[1] == "-h":
-    print("Hello")
-elif  sys.argv[1] == "-m":
+    # 宣言: 必要な変数
+    # 
+    # 入力
+    # hobby_list.txtのファイル情報とinput.txtの公開情報を受け取りたい
+    # input_hobby_list = hobby_list.txt: [[いち, 睡眠, アニメ/漫画/ゲーム/プログラミング/映画]...etc]
+    # input = input.txt: [[いちお 170 60 27 エンジニア 7 非公開]...etc]
+
+
+    # データ加工
+    # データのnameを一致させてhobby_list.txtの内容にも公開情報を適用させたい
+    # 1:output_hobby_list = []
+    # 2:output_hobby_list.extend(input[0][0],input[0][-1],input_hobby_list[0][1:-1])
+    # [["としお", "公開", "イラスト作成", "アニメ/漫画/ゲーム/ガンダム/激辛/一人ベイブレード"],
+    # ["ともお", "公開", "漫画 アニメ/漫画/ゲーム"], 
+    # ["いたるっす", "公開", "プロデュース/アニメ/漫画/ゲーム/映画"]]
+    # 出力
+    
+elif sys.argv[1] == "-m":
     
     san = "さん"
     gobi = ""
