@@ -16,11 +16,7 @@ def ft_len(x):
 # print(ft_len("hoge"),len("hoge"),ft_len("hoge") == len("hoge"))
 # print(ft_len(""),len(""),ft_len("") == len(""))
 
-
-
 if  ft_len(sys.argv) <= 1:
-    print("")
-if  len(sys.argv) <= 1:
     print("")
 elif sys.argv[1] == "-h":
     # 入力
